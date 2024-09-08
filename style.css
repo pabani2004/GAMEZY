@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://i.ibb.co/gM4YXYJ/abswall.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    width: 90%;
+    max-width: 600px; /* Set a max width for larger screens */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.quiz-box {
+    margin-bottom: 20px;
+}
+
+.question-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 300px; /* Limit the size of the image */
+    margin: 20px 0; /* Add some space around the image */
+    border-radius: 10px; /* Optional: add rounded corners */
+}
+
+.options {
+    margin: 20px 0;
+}
+
+.option {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 1.2rem;
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+.option:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.option.correct {
+    background: green;
+}
+
+.option.wrong {
+    background: red;
+}
+
+.next-button, .restart-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(0, 0, 255, 0.5);
+    color: white;
+    transition: background 0.3s;
+    font-size: 1.2rem;
+}
+
+.next-button:hover, .restart-button:hover {
+    background: rgba(0, 0, 255, 0.8);
+}
+
+.result {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .option {
+        font-size: 1rem;
+    }
+
+    .next-button, .restart-button {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .option {
+        font-size: 1.1rem;
+    }
+
+    .next-button, .restart-button {
+        font-size: 1.1rem;
+    }
+}
